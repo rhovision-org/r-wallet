@@ -53,8 +53,8 @@ npm install
 npm start            # Vite dev server on http://localhost:5173
 ```
 
-To run against a local node (from `~/rchain-rust`, the
-[`rchain-community/rchain-rust`](https://github.com/rchain-community/rchain-rust) repo):
+To run against a local node (from `~/rholo`, the
+[`rhovision-org/rholo`](https://github.com/rhovision-org/rholo) repo):
 
 ```bash
 tools/devnet.sh build
@@ -167,8 +167,8 @@ The wallet's templates in `src/utils/rho.ts` use these:
 
 ## Quantum key hygiene
 
-The wallet side of `rchain-rust`'s post-quantum plan
-([`docs/src/contributor/post-quantum-plan.md`](https://github.com/rchain-community/rchain-rust/blob/dev/docs/src/contributor/post-quantum-plan.md)
+The wallet side of `rholo`'s post-quantum plan
+([`docs/src/contributor/post-quantum-plan.md`](https://github.com/rhovision-org/rholo/blob/dev/docs/src/contributor/post-quantum-plan.md)
 §16.1). A REV address is a hash of the public key, so receiving REV reveals nothing; the key becomes
 public the first time it signs a deploy. Value is safest behind a key that has never signed.
 
@@ -236,7 +236,7 @@ positions. In rholang the same read is `pos!("getDelegations", delegatorKey, *re
 ## Deploy & transactions
 
 The three operations an app performs against a node (per
-[`rchain-rust` `docs/src/developer/building-apps.md`](https://github.com/rchain-community/rchain-rust/blob/main/docs/src/developer/building-apps.md)):
+[`rholo` `docs/src/developer/building-apps.md`](https://github.com/rhovision-org/rholo/blob/main/docs/src/developer/building-apps.md)):
 
 1. **Explore** — `POST /api/explore-deploy` (read-only eval); the result goes to the editor's response window.
 2. **Deploy** — sign `DeployData` and `POST /api/deploy`; the deploy lands in the pool and is included when the node proposes. Always available.

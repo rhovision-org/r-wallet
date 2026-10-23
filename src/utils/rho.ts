@@ -13,7 +13,7 @@ export const fn_transfer_funds = (rev_addr_to: string, amount: number|string) =>
 `;
 
 // Rholang to move the *whole* balance of the signing vault to `rev_addr_to`, in one deploy
-// (quantum key hygiene, rchain-rust post-quantum plan §16.1). The balance is read inside the deploy,
+// (quantum key hygiene, rholo post-quantum plan §16.1). The balance is read inside the deploy,
 // after the node has pre-charged phlo, so the amount is exactly what the vault holds at that moment
 // and the transfer cannot fail for want of funds. `rev_addr_from` must be the signer's own address:
 // `transfer` spends the vault derived from `deployerId`, and `getBalance` reads the one named here.

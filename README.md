@@ -2,7 +2,7 @@
 
 **R Wallet** is a browser wallet for the RChain **REV** token and a
 **WYSIWYG rholang deployer**. It is a single-page app that talks directly to a
-[Rust RNode](https://github.com/rchain-community/rchain-rust)'s HTTP API — no gRPC,
+[Rust RNode](https://github.com/rhovision-org/rholo)'s HTTP API — no gRPC,
 no backend proxy.
 
 - **Write & deploy rholang visually** — a Monaco code editor with `EXPLORE`
@@ -17,7 +17,7 @@ no backend proxy.
 
 ## The rgov successor
 
-R Wallet is the modern successor to [rgov](https://github.com/rchain-community/rgov),
+R Wallet is the modern successor to [rgov](https://github.com/rhovision-org/rgov),
 RChain's earlier governance / liquid-democracy app. rgov's dev interface was a
 rholang deployer with a dropdown of governance contract templates; R Wallet carries
 those templates forward in a fresh React/Vite UI and adds the wallet layer that
@@ -47,10 +47,10 @@ npm install
 npm start          # dev server at http://localhost:5173
 ```
 
-To use it against a real node, run a local devnet (from `~/rchain-rust`):
+To use it against a real node, run a local devnet (from `~/rholo`):
 
 ```bash
-cd ~/rchain-rust
+cd ~/rholo
 tools/devnet.sh build
 tools/devnet.sh up --validators 1   # public HTTP 40403, admin HTTP 40405
 ```

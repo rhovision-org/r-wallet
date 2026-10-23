@@ -26,11 +26,11 @@ npm run test:output  # tsx scripts/test-output-json.ts — Output-window JSON fo
 npm run serve        # vite preview
 ```
 
-The local devnet lives in **`~/rchain-rust`** (the node repo,
-[`rchain-community/rchain-rust`](https://github.com/rchain-community/rchain-rust)):
+The local devnet lives in **`~/rholo`** (the node repo,
+[`rhovision-org/rholo`](https://github.com/rhovision-org/rholo)):
 
 ```bash
-cd ~/rchain-rust && tools/devnet.sh build && tools/devnet.sh up --validators 1
+cd ~/rholo && tools/devnet.sh build && tools/devnet.sh up --validators 1
 # public HTTP 40403, admin HTTP 40405
 ```
 
@@ -150,7 +150,7 @@ signed protobuf** (field 12) — omit the field for an ordinary deploy.
    gated by `capabilities.adminHttp`, fetched from `GET /api/v1/capabilities`).
    Deploys/transfers/faucets are **submit-and-track** (`src/utils/transactions.ts`:
    add a `pending` record, then `refresh_tx_states` polls `deploy-status` AND
-   reconciles with `GET /api/v1/deploys`). Authoritative contract: `rchain-rust`
+   reconciles with `GET /api/v1/deploys`). Authoritative contract: `rholo`
    `docs/src/developer/building-apps.md`.
 10. **Help** — a global **help mode** (LayoutContext) reveals inline hints;
     helper modals (`SnippetExplainModal`, `DeployHelpModal`) explain a snippet or
@@ -165,7 +165,7 @@ signed protobuf** (field 12) — omit the field for an ordinary deploy.
     must do the same, or the exposure panel will call a public key unseen. See `docs/DEVELOPER.md`
     *Quantum key hygiene*.
 
-## Known node-side issues (out of scope here, in `~/rchain-rust`)
+## Known node-side issues (out of scope here, in `~/rholo`)
 
 - `explore-deploy` OpenAPI doc-vs-handler discrepancy (`explore-deploy` body is a raw
   string, not `ExploreDeployRequest`).
