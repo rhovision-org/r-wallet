@@ -2,7 +2,7 @@
 // read-capability URI — the value the editor's governance snippets need as their `ReadcapURI`.
 //
 // Why this exists: the master URI is not a constant, it is the product of deploying the contract
-// set on a particular chain. The original toolchain (`github.com/rchain-community/rgov`,
+// set on a particular chain. The original toolchain (`github.com/rhovision-org/rgov`,
 // Jakefile.js) deployed contracts in dependency order, recorded each resulting `rho:id`, and
 // substituted dependencies into dependents. A master URI recorded for one chain (e.g. the old
 // Scala rhobot shard) means nothing on a fresh chain, which is why the governance snippets stall
@@ -104,10 +104,10 @@ function resolve_rgov(): void {
 
     const cache = path.join(HEREDIR, ".rgov-cache");
     if (!fs.existsSync(path.join(cache, "rholang/core/Inbox.rho"))) {
-        console.log(`contracts not found at ${rgov_dir} — cloning rchain-community/rgov into ${cache}\n`);
+        console.log(`contracts not found at ${rgov_dir} — cloning rhovision-org/rgov into ${cache}\n`);
         const res = spawnSync(
             "git",
-            ["clone", "--depth", "1", "https://github.com/rchain-community/rgov", cache],
+            ["clone", "--depth", "1", "https://github.com/rhovision-org/rgov", cache],
             { stdio: "inherit" }
         );
         if (res.status !== 0) {

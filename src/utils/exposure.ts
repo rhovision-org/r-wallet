@@ -1,6 +1,6 @@
 // Quantum key hygiene: has this account's public key been revealed, and should its REV move?
 //
-// The rchain-rust post-quantum plan (docs/src/contributor/post-quantum-plan.md §16.1) puts address
+// The rholo post-quantum plan (docs/src/contributor/post-quantum-plan.md §16.1) puts address
 // hygiene in the wallet. A REV address is a hash of the public key, so an address that has only ever
 // *received* REV does not reveal its key. The key becomes public the first time it signs a deploy:
 // the deploy carries it in `deployer`, and every block that includes the deploy stores it. From then

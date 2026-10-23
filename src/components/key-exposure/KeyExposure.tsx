@@ -1,7 +1,7 @@
 // Quantum key hygiene on the dashboard: whether the active account's public key is revealed, a
 // warning when a revealed account holds more than the threshold, and a sweep of the whole balance to
 // a fresh, never-used address. The logic lives in src/utils/exposure.ts and `rnode.sweep`; this is
-// the UI. Background: rchain-rust docs/src/contributor/post-quantum-plan.md §16.1.
+// the UI. Background: rholo docs/src/contributor/post-quantum-plan.md §16.1.
 
 import { useEffect, useMemo, useState } from "react";
 import { useLayout, useNodes } from "Context";

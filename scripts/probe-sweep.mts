@@ -1,7 +1,7 @@
 // Live check of quantum key hygiene against a running node (`-- --node <url>`, default
 // http://localhost:40403): fund a fresh account, confirm its key is not seen, sweep it to another
 // fresh account, then confirm the node's deployer index finds the sweeper's key and the balance moved.
-// Needs a node with the deployer index (rchain-rust `GET /api/v1/deployer`) whose genesis funds
+// Needs a node with the deployer index (rholo `GET /api/v1/deployer`) whose genesis funds
 // the devnet deployer key (as `tools/devnet.sh` does).
 //
 //   npx tsx scripts/probe-sweep.mts -- --node http://localhost:40403
